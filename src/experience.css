@@ -1,0 +1,103 @@
+.home {
+    background-color: #C8E7F5;
+    margin: 0;
+    display: grid;
+    padding: 13vh 5vh 10vh 5vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 6fr 6fr;
+    gap: 2rem;
+    justify-content: center;
+    height: 77vh;
+}
+
+.home-title {
+    display: none;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 0 10px;
+    padding-top: 20px;
+}
+
+.card {
+    background-color: #F6D2E0;
+    overflow: hidden;
+    box-shadow: 0 0 15px -5px;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .3%;
+    animation: ease-in-out;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.card:hover {
+    box-shadow: 0 0 15px 0px;
+}
+.card-body {
+    padding: 0 10px;
+    font-size: 12;
+    overflow-y: scroll;
+}
+
+.card-title {
+    padding: 0 15px;
+    margin: 25px 0 0 0;
+    font-size: medium;
+}
+
+.card-img {
+    height: 4rem;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 0;
+    object-fit: contain;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.card-btn {
+    cursor: pointer;
+    padding: 1rem;
+    background-color: #F6D2E0;
+    border: none;
+    transition: .2s;
+}
+
+.card-btn:hover {
+    color: #407076;
+}
+
+.card-description {
+    padding: 0 1rem;
+}
+
+.card-back {
+    padding: 1rem 2rem;
+    overflow-y: scroll;
+}
+
+@media (max-width: 700px) {
+    .home {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr repeat(4, 12fr);
+        height: 330vh;
+    }
+    .card {
+        margin-bottom: 15vh;
+    }
+
+    .home-title {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        margin-top: 0;
+        padding-top: 10vh;
+        height: 10vh;
+        display: flex;
+    }
+}
